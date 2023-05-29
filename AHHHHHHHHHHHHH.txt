@@ -1,0 +1,47 @@
+Public Class Form1
+
+    Private Sub Findbtn_Click(sender As System.Object, e As System.EventArgs) Handles Findbtn.Click
+        Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff"
+
+
+        If Teacherbox.Checked = True Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Teacher "
+
+        If StudentBox.Checked = True Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Student"
+
+        If MaintenanceBox.Checked = True Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Maintenance"
+
+
+        If Teacherbox.Checked = True And ComboBox1.SelectedItem = "A" Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Teacher\A "
+
+        If Teacherbox.Checked = True And ComboBox1.SelectedItem = "B" Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Teacher\B "
+
+        If StudentBox.Checked = True And ComboBox1.SelectedItem = "C" Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Student\C "
+
+        If StudentBox.Checked = True And ComboBox1.SelectedItem = "D" Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Student\D "
+
+        If MaintenanceBox.Checked = True And ComboBox1.SelectedItem = "E" Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Maintenance\E"
+
+        If MaintenanceBox.Checked = True And ComboBox1.SelectedItem = "F" Then Alldialog.InitialDirectory = "C:\Users\salva\Desktop\Data stuff\Maintenance\F"
+
+            Alldialog.ShowDialog()
+
+
+    End Sub
+
+  
+
+    Private Sub Teacherbox_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles Teacherbox.CheckedChanged
+
+        If StudentBox.CheckState = True Then Teacherbox.Refresh()
+
+
+    End Sub
+
+    Private Sub StudentBox_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles StudentBox.CheckedChanged
+
+    End Sub
+
+    Private Sub MaintenanceBox_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles MaintenanceBox.CheckedChanged
+
+    End Sub
+End Class
